@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-section"></div>
+        <div class="form-section">
+            <div class="form-container">
+                <h1>Registrarse</h1>
+                <form id="login-form"  >
+                    <input type="text" placeholder="Nombre completo" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="text" placeholder="Nombre de usuario" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <input type="password" placeholder="Confirmar contraseña" required>
+                    <button type="submit" class="btn">Registrarse</button>
+                </form>
+                <div class="links">
+                    <a href="index.html">¿Ya tienes una cuenta? Inicia sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('login-form');       
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                window.location.href = './pages/dashboard.html';
+            });
+        });
+
+    </script>
+
+</body>
+</html>
