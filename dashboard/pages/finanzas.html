@@ -1,3 +1,29 @@
 <div>
-    <h1>Finanzas</h1>
+    <img src="https://www.ionos.es/startupguide/fileadmin/StartupGuide/Teaser/administration-t.jpg"
+        style="display: block; object-fit: cover; border-radius: 20px; width: 100%; height: 20vh; max-height: 280px; opacity: 1; object-position: center 50%;">
+</div>
+<div style="user-select: none; transition: background 20ms ease-in; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 78px; width: 78px; border-radius: 0.25em; flex-shrink: 0; position: relative; z-index: 1; margin-left: 3px; margin-bottom: 0px; margin-top: -42px; pointer-events: auto;"><div style="height: 78px; width: 78px; font-size: 78px; line-height: 1; margin-left: 0px; color: black;"><img alt="🤩" src="https://images.emojiterra.com/google/android-12l/512px/1f4b0.png" style="position: absolute; top: 0px; left: 0px; opacity: 1; width: 78px; height: 78px; transition: opacity 100ms ease-in;"></div></div>
+<div>
+<div class="main-content">
+    <h1>Gestión de Finanzas</h1>
+    <div class="finanzas-form content-card">
+        <h2>Agregar Transacción</h2>
+        <form id="transaccion-form">
+            <input type="text" id="descripcion" placeholder="Descripción" required>
+            <input type="number" id="monto" placeholder="Monto" required>
+            <select id="tipo">
+                <option value="Ingreso">Ingreso</option>
+                <option value="Gasto">Gasto</option>
+            </select>
+            <button type="submit" class="btn">Agregar</button>
+        </form>
+    </div>
+    <div class="finanzas-list content-card">
+        <h2>Historial de Transacciones</h2>
+        <ul id="lista-transacciones"></ul>
+    </div>
+    <div class="balance content-card">
+        <h2>Balance Actual: <span id="balance-actual">0.00</span></h2>
+    </div>
+</div>
 </div>

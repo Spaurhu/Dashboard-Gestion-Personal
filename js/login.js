@@ -1,18 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('login-form');
+document.getElementById("form-login").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const usuarioIngresado = document.getElementById("loginUsuario").value;
+    const passwordIngresado = document.getElementById("loginPassword").value;
 
-    // const validUsername = 'admin';
-    //const validPassword = 'admin';
+    const usuarioRegistrado = localStorage.getItem("usuario");
+    const passwordRegistrado = localStorage.getItem("password");
 
-    loginForm.addEventListener('submit', function(e) {
-        e.preventDefault(); 
+    const mensaje = document.getElementById("mensaje");
 
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        console.log("Usuario: " + username  );
-        console.log("Contraseña: " + password);
-
-        window.location.href = '../dashboard/index.html';
-    });
+    if (usuarioIngresado === usuarioRegistrado && passwordIngresado === passwordRegistrado) {
+        mensaje.textContent = "Inicio de sesión exitoso. ¡Bienvenido!";
+        mensaje.style.color = "green";
+        // Redirigir a otra página
+        window.location.href = "dashboard/index.html";
+    } else {
+        mensaje.textContent = "Usuario o contraseña incorrectos.";
+        mensaje.style.color = "red";
+    }
 });

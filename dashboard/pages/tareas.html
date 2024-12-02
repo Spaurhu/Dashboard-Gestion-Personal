@@ -1,12 +1,33 @@
+<div>
+    <img src="https://www.workmeter.com/wp-content/uploads/2021/08/gestion-personal-scaled.jpg"
+        style="display: block; object-fit: cover; border-radius: 20px; width: 100%; height: 20vh; max-height: 280px; opacity: 1; object-position: center 50%;">
+</div>
+<div style="user-select: none; transition: background 20ms ease-in; cursor: pointer; display: flex; align-items: center; justify-content: center; height: 78px; width: 78px; border-radius: 0.25em; flex-shrink: 0; position: relative; z-index: 1; margin-left: 3px; margin-bottom: 0px; margin-top: -42px; pointer-events: auto;"><div style="height: 78px; width: 78px; font-size: 78px; line-height: 1; margin-left: 0px; color: black;"><img alt="🤩" src="https://em-content.zobj.net/source/apple/81/white-heavy-check-mark_2705.png" style="position: absolute; top: 0px; left: 0px; opacity: 1; width: 78px; height: 78px; transition: opacity 100ms ease-in;"></div></div>
+<div>
+
+<h1>Gestión de Tareas</h1>
+
 <div id="todo-app">
-    <h2 class="text-title" >Tareas</h2>
-    <form class="form-tarea" id="task-form">
-        <div class="mb-3">
-            <input type="text" id="task-title" class="form-control" placeholder="Nueva tarea" required>
+    <form id="task-form">
+        <div class="row g-2">
+            <div class="col-9">
+                <input type="text" id="task-title" class="form-control" placeholder="Nueva tarea" required>
+            </div>
+            <div class="col-3">
+                <button type="submit" class="btn btn-primary w-100">Añadir Tarea</button>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary">Añadir Tarea</button>
     </form>
-    <div id="task-list" class="mt-3"></div>
+</div>
+<p></p>
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Lista de las tareas</h3>
+    <span>Accion</span>
+    <div class="btn-group" id="filter-buttons">
+        
+    </div>
 </div>
 
-<script src="js/tareas.js"></script>
+<div id="task-list" class="mt-3"></div>
+
+

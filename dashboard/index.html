@@ -4,32 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Gestión Personal</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Personal CSS -->
-    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
     <div class="container-fluid vh-100 d-flex flex-column">
         <div class="row flex-grow-1">
-            <!-- Sidebar -->
             <aside class="col-12 col-md-3 bg-primary text-white p-3 d-flex flex-column align-items-center shadow">
-                <div class="profile text-center mb-4">
-                    <div class="profile-pic"></div>
-                    <h5 class="mt-2">Nombre del Usuario</h5>
+                <div class="profile text-center mb-4" id="perfil-menu">
+                    <div class="profile-pic" style="background-image: url('https://dondeestudiar.pe/wp-content/uploads/2022/12/UTP.jpg');"></div>
+                    <h5 class="mt-2">Estudiante de la UTP</h5>
                 </div>
-                <nav class="nav flex-column w-100">
+                <nav class="nav flex-column w-100"> 
                     <a class="nav-link text-white py-2 px-3 menu-item" id="home">🏠 Home</a>
                     <a class="nav-link text-white py-2 px-3 menu-item" id="tareas">✅ Tareas</a>
                     <a class="nav-link text-white py-2 px-3 menu-item" id="recordatorios">⏰ Recordatorios</a>
                     <a class="nav-link text-white py-2 px-3 menu-item" id="diario">📓 Diario</a>
                     <a class="nav-link text-white py-2 px-3 menu-item" id="finanzas">💰 Finanzas</a>
-                    <a class="nav-link text-white py-2 px-3 menu-item" id="modal"> Modal</a>
                 </nav>
             </aside>
-            <!-- Main Content -->
             <main class="col-12 col-md-9 bg-light p-4 main-content" id="main-content">
-                
             </main>
         </div>
     </div>

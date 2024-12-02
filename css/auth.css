@@ -20,7 +20,25 @@ body, html {
 
 .image-section {
     flex: 1;
-    background: url('https://blogimage.vantagecircle.com/content/images/2022/11/Gestio-n-de-empleados.png') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination,
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--color-primary);
 }
 
 .form-section {

@@ -5,26 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 <body>
     <div class="container">
-        <div class="image-section"></div>
+        <div class="image-section">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifdmk9PstrAa3B3YCdxyDVonWEspMAoPGzo1y7XtKAOHe3lHhbqVAQEbZ0R_yJRNRDnFtZpjScfJHVQDTpVCoIUrhkztEC7T1piHVJp2vRMEb8EwmDT_GrJL3LCv8pnJZhlr1aHckgguE/s1600/La+gesti%25C3%25B3n+de+recursos+humanos+en+la+empresa.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://gestiondeltiempo.website/wp-content/uploads/2024/07/Listas-de-tareas-pendientes.webp" alt="Imagen 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://img.freepik.com/fotos-premium/equilibrio-vida-laboral-personal-regimen-diario-gestion-tiempo-mano-sostiene-reloj-simbolico-sectores_870512-2202.jpg" alt="Imagen 3">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
         <div class="form-section">
             <div class="form-container">
                 <h1>Iniciar Sesión</h1>
-                <form id="login-form">
-                    <input type="text" id="username" placeholder="Usuario" required>
-                    <input type="password" id="password" placeholder="Contraseña" required>
+                <form id="form-login">
+                    <input type="text" id="loginUsuario" placeholder="Usuario" required>
+                    <input type="password" id="loginPassword" placeholder="Contraseña" required>
                     <button type="submit" class="btn">Iniciar Sesión</button>
                 </form>
                 <div class="links">
                     <a href="registro.html">Registrarse</a>
                     <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
                 </div>
+                <p id="mensaje"></p>
             </div>
         </div>
     </div>
 
-    <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        document.getElementById("form-login").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const usuarioIngresado = document.getElementById("loginUsuario").value;
+            const passwordIngresado = document.getElementById("loginPassword").value;
+    
+            const usuarioRegistrado = localStorage.getItem("usuario");
+            const passwordRegistrado = localStorage.getItem("password");
+    
+            const mensaje = document.getElementById("mensaje");
+    
+            if (usuarioIngresado === usuarioRegistrado && passwordIngresado === passwordRegistrado) {
+                mensaje.textContent = "Inicio de sesión exitoso. ¡Bienvenido!";
+                mensaje.style.color = "green";
+                // Redirigir a otra página
+                window.location.href = "dashboard/index.html";
+            } else {
+                mensaje.textContent = "Usuario o contraseña incorrectos.";
+                mensaje.style.color = "red";
+            }
+        });
+        
+    </script>
 </body>
 </html>
